@@ -64,27 +64,6 @@ img {
 /* -----------------------------------------
    ACCESSIBILITY
 ----------------------------------------- */
-.skip-link {
-  position: absolute;
-  left: 0.75rem;
-  top: 0.75rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.75);
-  border: 1px solid var(--border);
-  color: var(--text);
-  text-decoration: none;
-  z-index: 9999;
-  transform: translateY(-160%);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.skip-link:focus {
-  outline: none;
-  box-shadow: var(--ring);
-  transform: translateY(0);
-}
-
 :focus-visible {
   outline: none;
   box-shadow: var(--ring);
@@ -106,25 +85,26 @@ p {
 }
 
 a {
-  color: rgba(210, 190, 255, 0.92);
-  text-decoration: underline;
-  text-decoration-color: rgba(210, 190, 255, 0.35);
+  color: rgba(216, 199, 255, 0.96);
+  text-decoration: none;
+  text-decoration-color: transparent;
   text-underline-offset: 3px;
   transition: color var(--transition), text-decoration-color var(--transition), background var(--transition);
 }
 
 a:visited {
-  color: rgba(210, 190, 255, 0.92);
+  color: rgba(216, 199, 255, 0.96);
 }
 
 a:hover {
   color: rgba(210, 190, 255, 0.95);
-  text-decoration-color: rgba(210, 190, 255, 0.6);
+  text-decoration-color: rgba(210, 190, 255, 0.55);
+  text-decoration: underline;
 }
 
 .panel a:not(.button) {
-  border-radius: 8px;
-  padding: 0.05rem 0.2rem;
+  border-radius: 6px;
+  padding: 0.02rem 0.2rem;
 }
 
 .panel a:not(.button):hover {
