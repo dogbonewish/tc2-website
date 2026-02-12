@@ -18,13 +18,13 @@
 
   <!-- Google Font & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <link rel="stylesheet" href="assets/site.css"/>
 </head>
 <body>
 
-  <nav class="navbar" aria-label="Primary">
+  <nav class="navbar">
     <a href="index.html">Home</a>
-    <a href="map-formatting.html" class="active">Map Formatting</a>
+    <a href="map-formatting.html" class="active" aria-current="page">Map Formatting</a>
     <a href="quick-info.html">Quick Info</a>
   </nav>
 
@@ -32,13 +32,13 @@
     <h1>Map Formatting</h1>
   </header>
 
-  <main class="container" role="main">
+  <div class="container">
     <!-- General -->
     <section class="panel">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-general.png" alt="Recommended folder structure for Typical Colors 2 maps"/>
+            <img src="assets/format-general.png"/>
             <figcaption>Folder structure for maps</figcaption>
           </figure>
         </div>
@@ -78,11 +78,11 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-geometry1.png" alt="3cp_yellowvalley map view with collision geometry visible"/>
+            <img src="assets/format-geometry1.png"/>
             <figcaption>3cp_yellowvalley with Geometry</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-geometry2.png" alt="3cp_yellowvalley map view without collision geometry"/>
+            <img src="assets/format-geometry2.png"/>
             <figcaption>3cp_yellowvalley without Geometry</figcaption>
           </figure>
         </div>
@@ -103,11 +103,11 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-ignore1.png" alt="3cp_yellowvalley map with Ignore parts visible"/>
+            <img src="assets/format-ignore1.png"/>
             <figcaption>3cp_yellowvalley with Ignore</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-ignore2.png" alt="3cp_yellowvalley map without Ignore parts"/>
+            <img src="assets/format-ignore2.png"/>
             <figcaption>3cp_yellowvalley without Ignore</figcaption>
           </figure>
         </div>
@@ -130,11 +130,11 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-doors1.png" alt="3cp_yellowvalley map with doors removed"/>
+            <img src="assets/format-doors1.png"/>
             <figcaption>3cp_yellowvalley without Doors</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-doors2.png" alt="Example of door PrimaryPart and Trigger configuration in studio"/>
+            <img src="assets/format-doors2.png"/>
             <figcaption>PrimaryPart example & Trigger configuration</figcaption>
           </figure>
         </div>
@@ -169,7 +169,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-clips.png" alt="3cp_yellowvalley map view with player clip volumes highlighted"/>
+            <img src="assets/format-clips.png"/>
             <figcaption>3cp_yellowvalley with Clips</figcaption>
           </figure>
         </div>
@@ -188,7 +188,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-items.png" alt="Health and ammo kits as seen on Typical Colors 2 test maps"/>
+            <img src="assets/format-items.png"/>
             <figcaption>Kits as seen on test maps</figcaption>
           </figure>
         </div>
@@ -208,11 +208,11 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-controlpoints1.png" alt="Control point in Roblox Studio and in-game"/>
+            <img src="assets/format-controlpoints1.png"/>
             <figcaption>Control point in studio & in-game</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-controlpoints2.png" alt="Control point model and CaptureZone trigger volume"/>
+            <img src="assets/format-controlpoints2.png"/>
             <figcaption>Control point model & CaptureZone</figcaption>
           </figure>
         </div>
@@ -234,7 +234,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-briefcases1.png" alt="Green and Red capture-the-flag briefcases"/>
+            <img src="assets/format-briefcases1.png"/>
             <figcaption>Green briefcase and Red briefcase(CTF)</figcaption>
           </figure>
         </div>
@@ -254,7 +254,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-teamspecific.png" alt="Team-specific spawn zones and barriers"/>
+            <img src="assets/format-teamspecific.png"/>
             <figcaption>Barriers & SpawnZones</figcaption>
           </figure>
         </div>
@@ -276,7 +276,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-settings.png" alt="Recommended Settings folder layout for TC2 maps"/>
+            <img src="assets/format-settings.png"/>
             <figcaption>Settings folder format</figcaption>
           </figure>
         </div>
@@ -296,7 +296,7 @@
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-gamemode.png" alt="GameMode configuration values for Attack/Defend maps"/>
+            <img src="assets/format-gamemode.png"/>
             <figcaption>GameMode format for AD (IntValues)</figcaption>
           </figure>
         </div>
@@ -315,10 +315,11 @@
       </div>
     </section>
 
-  </main>
+  </div>
 
   <footer>
-    &copy; dm dogbone.wish on discord if you have an issue or email admin@dorcus.digital
+    &copy; dm dogbone.wish on discord if you have an issue or email
+    <a href="mailto:admin@dorcus.digital">admin@dorcus.digital</a>
   </footer>
 
 </body>
