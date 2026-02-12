@@ -22,6 +22,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="map-formatting.html" class="active" aria-current="page">Map Formatting</a>
@@ -30,21 +32,46 @@
   </nav>
 
   <header>
-    <h1>Map Formatting</h1>
+    <div class="header-inner">
+      <h1>Map Formatting</h1>
+      <p class="subtitle">Folder structure, required objects, and practical examples for TC2 Workshop maps.</p>
+    </div>
   </header>
 
-  <div class="container">
-    <section class="panel">
+  <main class="container" id="main-content">
+    <section class="panel" id="tc2-wiki">
       <h2>Need More TC2 Info?</h2>
       <p>This page focuses on how to format your maps for <strong>Typical Colors 2</strong>. For class stats, weapons, maps, and other game details, you can also use the community-run <strong>Typical Colors 2 Wiki</strong>.</p>
       <a href="https://typicalcolors2.fandom.com/wiki/Home" class="button" target="_blank" rel="noopener noreferrer">Open TC2 Wiki</a>
     </section>
+
+    <section class="panel" id="toc">
+      <h2>On this page</h2>
+      <p>Use this to jump around quickly (especially on mobile).</p>
+      <div class="toc" aria-label="Table of contents">
+        <a href="#general">General</a>
+        <a href="#plugin">Plugin & Tips</a>
+        <a href="#geometry">Geometry</a>
+        <a href="#ignore">Ignore</a>
+        <a href="#killbricks-anywhere">KillBricks (anywhere)</a>
+        <a href="#sawblade">Moving Sawblade prefab</a>
+        <a href="#doors">Doors</a>
+        <a href="#clips">Clips</a>
+        <a href="#items">Items</a>
+        <a href="#controlpoints">ControlPoints</a>
+        <a href="#briefcases">Briefcases</a>
+        <a href="#teamspecific">TeamSpecific</a>
+        <a href="#settings">Settings</a>
+        <a href="#gamemode">GameMode</a>
+        <a href="#testmap-extra">REAL Testmap_Extra</a>
+      </div>
+    </section>
     <!-- General -->
-    <section class="panel">
+    <section class="panel" id="general">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-general.png"/>
+            <img src="assets/format-general.png" alt="Example map folder structure in Roblox Studio" loading="lazy" decoding="async"/>
             <figcaption>Folder structure for maps</figcaption>
           </figure>
         </div>
@@ -61,14 +88,14 @@
     </section>
 
     <!-- Plugin & Tips -->
-    <section class="panel">
+    <section class="panel" id="plugin">
       <h2>Get the TC2 Map Plugin!</h2>
       <ul>
         <li>Expedite the map–making process greatly with custom features.</li>
         <li>Deploy test maps & kits, automate processes, validate before publishing.</li>
         <li>Resources here assume you have the plugin installed.</li>
       </ul>
-      <a href="https://create.roblox.com/store/asset/13046258210/TC2-Build-Suite" class="button" target="_blank">Download TC2 Build Suite</a>
+      <a href="https://create.roblox.com/store/asset/13046258210/TC2-Build-Suite" class="button" target="_blank" rel="noopener noreferrer">Download TC2 Build Suite</a>
 
       <h2>Tips</h2>
       <ul>
@@ -80,15 +107,15 @@
     </section>
 
     <!-- Geometry -->
-    <section class="panel">
+    <section class="panel" id="geometry">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-geometry1.png"/>
+            <img src="assets/format-geometry1.png" alt="3cp_yellowvalley with Geometry enabled" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley with Geometry</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-geometry2.png"/>
+            <img src="assets/format-geometry2.png" alt="3cp_yellowvalley without Geometry enabled" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley without Geometry</figcaption>
           </figure>
         </div>
@@ -105,15 +132,15 @@
     </section>
 
     <!-- Ignore -->
-    <section class="panel">
+    <section class="panel" id="ignore">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-ignore1.png"/>
+            <img src="assets/format-ignore1.png" alt="3cp_yellowvalley with Ignore objects visible" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley with Ignore</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-ignore2.png"/>
+            <img src="assets/format-ignore2.png" alt="3cp_yellowvalley without Ignore objects visible" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley without Ignore</figcaption>
           </figure>
         </div>
@@ -132,11 +159,11 @@
     </section>
 
     <!-- KillBricks anywhere (advanced) -->
-    <section class="panel">
+    <section class="panel" id="killbricks-anywhere">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/Killbricks without being in the killbrick folder.png" alt="Roblox Studio attributes and tags for a trigger_hurt killbrick"/>
+            <img src="assets/Killbricks without being in the killbrick folder.png" alt="Roblox Studio properties showing tags and attributes for a trigger_hurt killbrick" loading="lazy" decoding="async"/>
             <figcaption>Example setup for a KillBrick that works outside the KillBricks folder.</figcaption>
           </figure>
         </div>
@@ -173,7 +200,7 @@
     </section>
 
     <!-- Example hazard prefab: moving sawblade -->
-    <section class="panel">
+    <section class="panel" id="sawblade">
       <div class="row">
         <div class="col">
           <h2>Example Hazard Prefab – Moving Sawblade</h2>
@@ -201,15 +228,15 @@
     </section>
 
     <!-- Doors -->
-    <section class="panel">
+    <section class="panel" id="doors">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-doors1.png"/>
+            <img src="assets/format-doors1.png" alt="Example of map without Doors enabled" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley without Doors</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-doors2.png"/>
+            <img src="assets/format-doors2.png" alt="Door PrimaryPart and Trigger configuration example" loading="lazy" decoding="async"/>
             <figcaption>PrimaryPart example & Trigger configuration</figcaption>
           </figure>
         </div>
@@ -240,11 +267,11 @@
     </section>
 
     <!-- Clips -->
-    <section class="panel">
+    <section class="panel" id="clips">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-clips.png"/>
+            <img src="assets/format-clips.png" alt="3cp_yellowvalley with Clips visible" loading="lazy" decoding="async"/>
             <figcaption>3cp_yellowvalley with Clips</figcaption>
           </figure>
         </div>
@@ -259,11 +286,11 @@
     </section>
 
     <!-- Items -->
-    <section class="panel">
+    <section class="panel" id="items">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-items.png"/>
+            <img src="assets/format-items.png" alt="Health and ammo kit items as seen on test maps" loading="lazy" decoding="async"/>
             <figcaption>Kits as seen on test maps</figcaption>
           </figure>
         </div>
@@ -279,15 +306,15 @@
     </section>
 
     <!-- ControlPoints -->
-    <section class="panel">
+    <section class="panel" id="controlpoints">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-controlpoints1.png"/>
+            <img src="assets/format-controlpoints1.png" alt="Control point in Studio and in-game example" loading="lazy" decoding="async"/>
             <figcaption>Control point in studio & in-game</figcaption>
           </figure>
           <figure>
-            <img src="assets/format-controlpoints2.png"/>
+            <img src="assets/format-controlpoints2.png" alt="Control point model and CaptureZone example" loading="lazy" decoding="async"/>
             <figcaption>Control point model & CaptureZone</figcaption>
           </figure>
         </div>
@@ -305,11 +332,11 @@
     </section>
 
     <!-- Briefcases -->
-    <section class="panel">
+    <section class="panel" id="briefcases">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-briefcases1.png"/>
+            <img src="assets/format-briefcases1.png" alt="Green and Red briefcase objective example (CTF)" loading="lazy" decoding="async"/>
             <figcaption>Green briefcase and Red briefcase(CTF)</figcaption>
           </figure>
         </div>
@@ -325,11 +352,11 @@
     </section>
 
     <!-- TeamSpecific -->
-    <section class="panel">
+    <section class="panel" id="teamspecific">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-teamspecific.png"/>
+            <img src="assets/format-teamspecific.png" alt="Barriers and SpawnZones example" loading="lazy" decoding="async"/>
             <figcaption>Barriers & SpawnZones</figcaption>
           </figure>
         </div>
@@ -347,11 +374,11 @@
     </section>
 
     <!-- Settings -->
-    <section class="panel">
+    <section class="panel" id="settings">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-settings.png"/>
+            <img src="assets/format-settings.png" alt="Settings folder format example" loading="lazy" decoding="async"/>
             <figcaption>Settings folder format</figcaption>
           </figure>
         </div>
@@ -367,11 +394,11 @@
     </section>
 
     <!-- GameMode -->
-    <section class="panel">
+    <section class="panel" id="gamemode">
       <div class="row">
         <div class="col">
           <figure>
-            <img src="assets/format-gamemode.png"/>
+            <img src="assets/format-gamemode.png" alt="GameMode folder format for Attack/Defend (IntValues)" loading="lazy" decoding="async"/>
             <figcaption>GameMode format for AD (IntValues)</figcaption>
           </figure>
         </div>
@@ -391,7 +418,7 @@
     </section>
 
     <!-- Test map (advanced reference) -->
-    <section class="panel">
+    <section class="panel" id="testmap-extra">
       <div class="row">
         <div class="col">
           <h2>REAL Testmap_Extra</h2>
@@ -415,11 +442,11 @@
       </div>
     </section>
 
-  </div>
+  </main>
 
   <footer>
-    &copy; dm dogbone.wish on discord if you have an issue or email
-    <a href="mailto:admin@dorcus.digital">admin@dorcus.digital</a>
+    &copy; Contact <strong>@dogbone.wish</strong> on Discord or email
+    <a href="mailto:admin@dorcus.digital">admin@dorcus.digital</a>.
   </footer>
 
 </body>
