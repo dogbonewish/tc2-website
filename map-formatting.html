@@ -131,6 +131,75 @@
       </div>
     </section>
 
+    <!-- KillBricks anywhere (advanced) -->
+    <section class="panel">
+      <div class="row">
+        <div class="col">
+          <figure>
+            <img src="assets/Killbricks without being in the killbrick folder.png" alt="Roblox Studio attributes and tags for a trigger_hurt killbrick"/>
+            <figcaption>Example setup for a KillBrick that works outside the KillBricks folder.</figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <h2>KillBricks without the KillBricks folder</h2>
+          <ul>
+            <li>You can make a KillBrick that works <strong>anywhere in the map hierarchy</strong> (inside doors, nested folders, etc.) by using a specific combination of <strong>Tags</strong> and <strong>Attributes</strong>.</li>
+            <li>Add these <strong>Tags</strong> to the part:
+              <ul>
+                <li><code>CharacterTouchRoot</code></li>
+                <li><code>Touched</code></li>
+                <li><code>trigger_hurt</code></li>
+              </ul>
+            </li>
+            <li>Add these <strong>Attributes</strong>:
+              <ul>
+                <li><code>ClassName</code> = <code>"trigger_hurt"</code></li>
+                <li><code>Damage</code> = kill damage (for example <code>9001</code>)</li>
+                <li><code>DamageType</code> = kill icon / damage type name (e.g. <code>"Text"</code>)</li>
+                <li><code>Disabled</code> = <code>false</code> (unchecked)</li>
+                <li><code>Force</code> = <code>0, 0, 0</code> (or a push direction if desired)</li>
+                <li><code>Scream</code> = <code>true</code> (checked) if you want a death scream</li>
+                <li><code>Team</code> = team string or leave empty for both teams</li>
+                <li><code>Text</code> = killfeed text (for example <code>"has died"</code>)</li>
+                <li><code>trigger_hurt</code> = <code>true</code> (checked)</li>
+              </ul>
+            </li>
+            <li>This behaves like a normal KillBrick but does <strong>not</strong> require the part to be under the <code>KillBricks</code> folder. Use alongside existing KillBrick folders/settings to be extra safe.</li>
+            <li>You can also import a ready-made prefab: 
+              <a href="assets/rbxm/trigger_hurt.rbxm">trigger_hurt.rbxm</a> (place it in Studio and adjust the values you need).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example hazard prefab: moving sawblade -->
+    <section class="panel">
+      <div class="row">
+        <div class="col">
+          <h2>Example Hazard Prefab – Moving Sawblade</h2>
+          <ul>
+            <li>A fully set up <strong>moving sawblade</strong> hazard is provided as a prefab:
+              <a href="assets/rbxm/movingsawbladetc2.rbxm">movingsawbladetc2.rbxm</a>.</li>
+            <li>It already uses the <strong>KillBricks without the KillBricks folder</strong> method internally, so you do <strong>not</strong> need to weld or attach a separate KillBrick.</li>
+            <li>After inserting it into your map, you normally only change:
+              <ul>
+                <li>Its <strong>position</strong> and <strong>rotation</strong> in the world.</li>
+                <li>Any cosmetic parts (materials, colors) if you want to restyle it.</li>
+              </ul>
+            </li>
+            <li>The prefab uses the <code>DamageType</code> value <code>"FSaw"</code>, which is the kill icon used for the sawmill sawblade.</li>
+            <li>The motion is handled purely with <strong>constraints and physics</strong> (no scripts). If you want to make your own moving hazards, look into:
+              <ul>
+                <li><strong>HingeConstraints</strong> for rotation.</li>
+                <li><strong>Rod</strong> / guide parts to convert rotation into linear motion.</li>
+                <li>For more advanced setups: <strong>VectorForce</strong>, <strong>BodyForce</strong>, and <strong>AlignPosition</strong> (with rigidity) to move players with doors or platforms.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Doors -->
     <section class="panel">
       <div class="row">
@@ -316,6 +385,31 @@
             <li><strong>CTF</strong>: adds <code>CritsOnCap</code>, <code>MaxTime</code>, <code>PlayTo</code>, <code>TimeOnCap</code>.</li>
             <li><strong>Arena</strong>: adds <code>ActivateIn</code>, <code>PrepTime</code>.</li>
             <li><strong>None</strong>: adds <code>PrepTime</code> (infinite timer; end via VIP).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Test map (advanced reference) -->
+    <section class="panel">
+      <div class="row">
+        <div class="col">
+          <h2>REAL Testmap_Extra</h2>
+          <ul>
+            <li>An expanded test map that showcases <strong>hidden TC2 map features</strong>, updated collision examples, and extra settings not obvious from the default plugin test maps.</li>
+            <li>Download the latest prefab:
+              <a href="assets/rbxm/Testmap_Extra.rbxm">Testmap_Extra.rbxm</a>.
+              You can also load it from Roblox by ID <code>112829107151003</code>.</li>
+            <li>Includes:
+              <ul>
+                <li>More accurate collision parts and the actual player collision box so you can see where players fit.</li>
+                <li>New map <strong>Settings</strong> examples (including seasonal / Halloween and seat “sitting” toggles).</li>
+                <li>Advanced hazards such as pumpkin bombs, conveyors, simple logic setups and other physics-based gimmicks.</li>
+              </ul>
+            </li>
+            <li>Teleporters and doors in this test map demonstrate an important rule:
+              <strong>set the Model’s PrimaryPart</strong> to the part you want used for hitbox / teleporter detection; without it, they will not work correctly.</li>
+            <li>Doors do not support a separate “delay before moving”, but the motion uses a tween: a longer <code>MoveTime</code> gives a longer ease-in/out. You can fake a delay by placing the door offset and increasing the <code>Move</code> distance.</li>
           </ul>
         </div>
       </div>
